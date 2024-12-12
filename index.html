@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICK YOUR VINT | Coming Soon...</title>
+    
+    <!-- Meta Description (visibile nei risultati di ricerca) -->
+    <meta name="description" content="PICK YOUR VINT - Discover the best vintage clothing and sustainable fashion. Coming soon! / PICK YOUR VINT - Scopri i migliori vestiti vintage e la moda sostenibile. Arriviamo presto!">
+
+    <!-- Meta Keywords (parole chiave per SEO in italiano e inglese) -->
+    <meta name="keywords" content="Pick Your Vint, vintage clothing, sustainable fashion, second hand clothes, eco fashion, ethical fashion, vintage trends, clothing, eco-friendly fashion, vestiti vintage, moda sostenibile, abbigliamento usato, moda etica, tendenze vintage, moda eco-friendly">
+
+    <!-- Autore del sito -->
+    <meta name="author" content="PICK YOUR VINT">
+    
+    <!-- Ottimizzazione per robots dei motori di ricerca -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Link Canonico -->
+    <link rel="canonical" href="https://www.pickyourvint.it">
+    
+    <!-- Open Graph per il social sharing -->
+    <meta property="og:title" content="PICK YOUR VINT | Vintage Clothing - Sustainable Fashion">
+    <meta property="og:description" content="Discover the best vintage clothing and sustainable fashion with PICK YOUR VINT. Coming soon!">
+    <meta property="og:image" content="path-to-your-logo-image.jpg">
+    <meta property="og:url" content="https://www.pickyourvint.it">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card (per migliorare la visualizzazione su Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PICK YOUR VINT | Vintage Clothing - Sustainable Fashion">
+    <meta name="twitter:description" content="PICK YOUR VINT - Discover the best vintage clothing and sustainable fashion. Coming soon!">
+    <meta name="twitter:image" content="path-to-your-logo-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo.jpeg" type="image/jpeg">
+
+    <!-- Aggiungi hreflang per indicare le lingue -->
+    <link rel="alternate" href="https://www.pickyourvint.it" hreflang="it">
+    <link rel="alternate" href="https://www.pickyourvint.it" hreflang="en">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Contenitore video */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Posiziona il video dietro il contenuto */
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Overlay bianco semitrasparente sul video */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); /* Sfondo bianco opaco */
+            z-index: -1; /* Posiziona sopra il video, ma dietro al contenuto */
+        }
+
+        /* Contenuto */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            color: #fff;
+            user-select: none; /* Disabilita la selezione di testo */
+            padding: 20px;
+        }
+
+        .logo img {
+            max-width: 900px; /* Logo più grande */
+            width: 100%;
+            animation: fadeIn 2s ease-in-out;
+            pointer-events: none; /* Disabilita interazioni col logo */
+            user-select: none; /* Impedisce di evidenziarlo */
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 20px 0 10px;
+            font-weight: bold;
+            animation: textFade 1.5s ease-in-out 0.5s forwards, ledText 1s infinite alternate;
+            opacity: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            animation: textFade 1.5s ease-in-out 1s forwards, ledText 1s infinite alternate;
+            opacity: 0;
+        }
+
+        .emoji {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        /* Animazioni */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes textFade {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes ledText {
+            0% {
+                color: #fff;
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            }
+            50% {
+                color: #fff;
+                text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+            }
+            100% {
+                color: #fff;
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            }
+        }
+
+        /* Adattamento mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Overlay Bianco Semitrasparente -->
+    <div class="overlay"></div>
+
+    <div class="logo">
+        <img src="logo.svg" alt="PICK YOUR VINT logo - Vintage clothing brand">
+    </div>
+    <h1 id="message">Something exciting is on its way! 🚀</h1>
+    <p class="emoji" id="emoji">🌍</p>
+
+    <script>
+        // Rilevamento della lingua e visualizzazione del messaggio
+        window.onload = function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const messageElement = document.getElementById("message");
+            const emojiElement = document.getElementById("emoji");
+
+            // Poiché il sito è tutto in inglese, non cambiamo la lingua per ora
+            messageElement.textContent = "Something exciting is on its way! 🚀";
+            emojiElement.textContent = "🌍";
+        }
+    </script>
+</body>
+</html>
