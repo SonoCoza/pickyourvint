@@ -18,8 +18,8 @@
             width: 100%;
             overflow: hidden; /* No scrolling */
             font-family: Arial, sans-serif;
-            user-select: none; /* Impedisce la selezione su desktop */
-            -webkit-user-select: none; /* Impedisce la selezione su dispositivi mobili */
+            user-select: none; /* Prevent selection on desktop */
+            -webkit-user-select: none; /* Prevent selection on mobile */
         }
 
         body {
@@ -53,11 +53,11 @@
         }
 
         .logo img {
-            width: 90%; /* Occupa quasi tutto lo schermo */
-            max-width: 1200px; /* Dimensione massima per desktop */
-            height: auto; /* Mantiene le proporzioni */
+            width: 90%; /* Occupies most of the screen */
+            max-width: 1200px; /* Max size for desktop */
+            height: auto; /* Maintain proportions */
             animation: fadeIn 2s ease-in-out;
-            pointer-events: none; /* Disabilita interazioni col logo */
+            pointer-events: none; /* Disable interactions with logo */
         }
 
         h1 {
@@ -94,7 +94,7 @@
 
         @media (max-width: 480px) {
             .logo img {
-                width: 100%; /* Occupa tutto lo schermo su telefoni */
+                width: 100%; /* Full screen on phones */
             }
 
             h1 {
@@ -115,32 +115,22 @@
     <div class="logo">
         <img src="logo.svg" alt="PICK YOUR VINT logo">
     </div>
-    <h1 id="message">Something exciting is on its way! 🚀</h1>
+    <h1>Something exciting is on its way! 🚀</h1>
 
     <script>
-        // Rilevamento della lingua
-        window.onload = function() {
-            const userLang = navigator.language || navigator.userLanguage;
-            const messageElement = document.getElementById("message");
-
-            if (userLang.includes("it")) {
-                messageElement.textContent = "Qualcosa di emozionante sta per arrivare! 🚀";
-            }
-        }
-
-        // Disabilita clic destro
+        // Disable right-click
         document.addEventListener("contextmenu", function(e) {
             e.preventDefault();
         });
 
-        // Disabilita tasti di sviluppo
+        // Disable developer keys
         document.addEventListener("keydown", function(e) {
             if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) || (e.ctrlKey && e.key === "U")) {
                 e.preventDefault();
             }
         });
 
-        // Controlla se strumenti di sviluppo sono aperti
+        // Check if developer tools are open
         setInterval(function() {
             if (window.outerWidth - window.innerWidth > 200 || window.outerHeight - window.innerHeight > 200) {
                 alert("Developer tools are not allowed on this site.");
